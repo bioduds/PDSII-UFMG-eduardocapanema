@@ -10,15 +10,19 @@ int main() {
     long value1 = 200000;
     long value2;
 
-    long* long_ptr = &my_long; //yay
+    long* long_ptr = &value1; // 1 e 2
     
     //imprima o valor do objeto apontado por long_ptr
+    std::cout << *long_ptr << std::endl;
     
     //Imprima o valor de value2
+    long_ptr = &value2;
     
     //Imprima o endereço de value1
+    std::cout << &value1 << std::endl;
     
     //Imprima o endereço armazenado em long_ptr
+    std::cout << &long_ptr << std::endl;
     
     //Imprima a comparação entre o endereço de value1 com o endereço armazenado em long_ptr
         
