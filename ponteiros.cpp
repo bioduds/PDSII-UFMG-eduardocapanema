@@ -10,6 +10,12 @@ int main() {
     long value1 = 200000;
     long value2;
     unsigned int values[5] = {2, 4, 6, 8, 10};
+    unsigned int* values2 = new unsigned int[5];
+
+    for( int a=1; a<=sizeof(*values2)+1; a++ ) {
+        values2[a] = a*2;
+        std::cout << "testing a: " << values2[a] << std::endl;
+    }
     unsigned int* v_ptr = values;
 
     long* long_ptr = &value1; // 1 e 2
@@ -37,12 +43,16 @@ int main() {
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento.
     int vS = *(&values + 1) - values;
-    std::cout << "size vS: " << vS << std::endl;
+    //std::cout << "size vS: " << vS << std::endl;
     for( int i=0; i<vS; i++ ) {
         std::cout << values[i] << std::endl;
     }
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento com o nome de array como o ponteiro.
+    std::cout << "Ponteiro Deslocamento" << std::endl;
+    for( int i=0; i<vS; i++ ) {
+        std::cout << *(&values + i)[i] << std::endl;
+    }
     
     //imprimir os elementos do array values utilizando subscritos no ponteiro para o array.
     

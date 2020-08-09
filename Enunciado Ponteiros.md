@@ -1,10 +1,10 @@
-#Aula 02 - VPL 01 - Ponteiros (2pts)
+# Aula 02 - VPL 01 - Ponteiros (2pts)
 
-##Data de entrega: segunda, 31 Ago 2020, 23:59
+## Data de entrega: segunda, 31 Ago 2020, 23:59
 
-##Arquivos requeridos: main.cpp (Baixar)
+## Arquivos requeridos: main.cpp (Baixar)
 
-###Tipo de trabalho: Trabalho individual
+### Tipo de trabalho: Trabalho individual
 
 **Para cada um dos itens seguintes, escreva uma única instrução que realiza a tarefa indicada (os comentários servem apenas para lhe auxiliar). Suponha que as variáveis do tipo long value1 e value2 tenham sido declaradas e que value1 tenha sido inicializado como 200000. As perguntas que não tem saída, não serão avaliadas mas podem ser feitas como revisão.**
 
