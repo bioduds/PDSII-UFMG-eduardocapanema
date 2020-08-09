@@ -36,7 +36,12 @@ int main() {
     }
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento.
-    
+    int vS = *(&values + 1) - values;
+    std::cout << "size vS: " << vS << std::endl;
+    for( int i=0; i<vS; i++ ) {
+        std::cout << values[i] << std::endl;
+    }
+
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento com o nome de array como o ponteiro.
     
     //imprimir os elementos do array values utilizando subscritos no ponteiro para o array.
