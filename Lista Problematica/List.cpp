@@ -1,8 +1,8 @@
 #include "List.hpp"
 
-List::List(){
+List::List() {
 	_size = 0;
-	_>head = NULL;
+	_head = NULL;
 }
 
 void List::insert(int value){
