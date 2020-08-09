@@ -5,10 +5,12 @@
 
 int main() {
 
-    std::cout << "Iniciando execução... Awesome Possum..." << std::endl;
+    //std::cout << "Iniciando execução... Awesome Possum..." << std::endl;
 
     long value1 = 200000;
     long value2;
+    unsigned int values[5] = {2, 4, 6, 8, 10};
+    unsigned int* v_ptr = values;
 
     long* long_ptr = &value1; // 1 e 2
     
@@ -25,9 +27,14 @@ int main() {
     std::cout << &long_ptr << std::endl;
     
     //Imprima a comparação entre o endereço de value1 com o endereço armazenado em long_ptr
+    std::cout << (&value1 == long_ptr) << std::endl;
         
     //imprimir os elementos do array values usando notação de array subscrito.
-    
+    //std::cout << "size: " << sizeof(*values) << std::endl;
+    for( int i=0; i<=sizeof(*values); i++ ) {
+        std::cout << values[i] << std::endl;
+    }
+
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento.
     
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento com o nome de array como o ponteiro.
