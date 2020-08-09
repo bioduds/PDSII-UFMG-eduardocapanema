@@ -10,7 +10,7 @@ int main() {
     long value1 = 200000;
     long value2;
 
-    long* long_ptr = &my_long; 
+    long* long_ptr = &my_long; //yay
     
     //imprima o valor do objeto apontado por long_ptr
     
