@@ -5,7 +5,7 @@
 
 int main() {
 
-    std::cout << "Iniciando execução..." << std::endl;
+    std::cout << "Iniciando execução... Awesome Possum..." << std::endl;
 
     long value1 = 200000;
     long value2;
