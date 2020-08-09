@@ -1,5 +1,6 @@
 /****************************************/
 #include <iostream>
+#include <cstdlib>
 #include <iomanip>
 #include <math.h>
 #include "Circunferencia.hpp"
@@ -7,11 +8,13 @@
 using namespace std;
 /****************************************/
 
+
 double Circunferencia::calcularArea() {
-    return PI*raio*raio;
+    //return PI*raio*raio;
+    return 3.14;
 }
 
-bool Circunferencia::possuiIntersecao( struct* Circunferencia c ) {
+bool Circunferencia::possuiIntersecao( struct Circunferencia *c ) {
 
     /* OBS:
        possuir interseção significa que existe pelo menos um ponto Pc1 = Pc2

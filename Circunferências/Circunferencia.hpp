@@ -1,15 +1,19 @@
 #ifndef CIRCUNFERENCIA_H
 #define CIRCUNFERENCIA_H
 
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+
 struct Circunferencia {
 
-    int xc, yc, raio; // coordenadas do centro e raio
+    double _xc, _yc, _raio; // coordenadas do centro e raio
 
     // Construtor
-    Circunferencia( int _xc, int _yc, int _raio ) {
-        xc = _xc;
-        yc = _yc;
-        raio = _raio;
+    Circunferencia( double xc, double yc, double raio ) {
+    //    this->_xc = xc;
+    //    this->_yc = yc;
+    //    this->_raio = raio;
     }
 
     // Métodos
@@ -17,5 +21,6 @@ struct Circunferencia {
     bool possuiIntersecao( struct Circunferencia *c );
 
 };
+
 #endif
 
