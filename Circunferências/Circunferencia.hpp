@@ -1,9 +1,12 @@
 #ifndef CIRCUNFERENCIA_H
 #define CIRCUNFERENCIA_H
-
+/**********************/
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
+#include <math.h>
+using namespace std;
+/**********************/
 
 struct Circunferencia {
 
@@ -11,9 +14,9 @@ struct Circunferencia {
 
     // Construtor
     Circunferencia( double xc, double yc, double raio ) {
-    //    this->_xc = xc;
-    //    this->_yc = yc;
-    //    this->_raio = raio;
+        _xc = xc;
+        _yc = yc;
+        _raio = raio;
     }
 
     // Métodos

@@ -1,4 +1,5 @@
 /****************************************/
+#include <cmath>
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
@@ -10,8 +11,8 @@ using namespace std;
 
 
 double Circunferencia::calcularArea() {
-    //return PI*raio*raio;
-    return 3.14;
+    // cout << _raio << endl;
+    return PI*_raio*_raio;
 }
 
 bool Circunferencia::possuiIntersecao( struct Circunferencia *c ) {
@@ -22,7 +23,21 @@ bool Circunferencia::possuiIntersecao( struct Circunferencia *c ) {
        entre os pontos centrais das circunferencias
     */
 
-    return false;
+    double raios = _raio + c->_raio;
+    double diff_x = pow( ( c->_xc -_xc ), (double)2 );
+    double diff_y = pow( ( c->_yc -_yc ), (double)2 );
+    double dist = sqrt( ( diff_y + diff_x ) );
+
+/*    cout << endl 
+         << "Raios: " << raios
+         << " Dist: " << dist
+         << endl
+         << "Diff_y: " << diff_y
+         << "Diff_x: " << diff_x
+         << endl
+         << "Sqrt 2: " << sqrt(2);
+*/
+    return ( raios >= dist );
 
 }
 
