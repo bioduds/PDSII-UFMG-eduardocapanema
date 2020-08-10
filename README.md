@@ -10,3 +10,6 @@
 
 ## Aula 03
 * **VPL 01 - Circunferências**
+
+## Aula 04
+* **VPL 01 - Ranking**
