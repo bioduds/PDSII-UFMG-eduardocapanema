@@ -18,7 +18,7 @@ void List::clearList() {
 
 void List::print() {
 	Node* head = _head;
-	if( _size > 0 ){
+	if( _size > 0 ) {
 		while( head ) {
 			std::cout << head->value << " ";
 			head = head->next;

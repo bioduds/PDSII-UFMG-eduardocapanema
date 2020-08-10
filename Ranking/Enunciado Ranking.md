@@ -51,3 +51,16 @@ http://www.cplusplus.com/reference/iomanip/setprecision/
 *Arquivos requeridos:*
 
 main.cpp Estudante.cpp
+
+*******************************
+
+2015000111 João 60 60 55 82 90
+2015111222 Maria 85 83 60 75 61
+2015222333 Carlos 72 99 80 73 78
+2015333444 Felipe 89 67 72 75 80
+2015444555 Carolina 55 83 95 92 60
+2015555666 Joana 64 67 69 69 65
+2015666777 Gabriel 93 85 95 87 91
+2015777888 Fernanda 82 66 78 65 77
+2015888999 Daniel 68 71 72 77 77
+2015999000 Marcos 77 57 60 58 58
