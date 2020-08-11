@@ -43,3 +43,11 @@
 16. Mostre que endereço é referenciado por v_ptr + 3, e que valor é armazenado nessa localização.
 
 17. Supondo que v_ptr aponte para values[4], que endereço é referenciado por v_ptr -= 4? Que valor é armazenado nessa localização?
+
+---
+Expected output:
+200000 200000 0x.*? 0x.*? 1 2 4 6 8 10 2 4 6 8 10 2 4 6 8 10 2 4 6 8 10 10 10 10 10 0x.*? 8 0x.*? 2
+
+Saída produzida:
+200000 200000 0x7ffcd77dd750 0x7ffcd77dd750 1 2 4 6 8 10 2 4 6 8 10 2 4 6 8 10 2 4 6 8 10 10 10 10 10 0x7ffcd77dd77c 8 0x7ffcd77dd770 2
+
