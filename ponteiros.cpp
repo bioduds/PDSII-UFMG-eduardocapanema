@@ -10,14 +10,7 @@ int main() {
     long value1 = 200000;
     long value2;
     unsigned int values[5] = {2, 4, 6, 8, 10};
-    unsigned int* values2 = new unsigned int[5];
-
-    for( int a=1; a<=sizeof(*values2)+1; a++ ) {
-        values2[a] = a*2;
-        std::cout << "testing a: " << values2[a] << std::endl;
-    }
     unsigned int* v_ptr = values;
-
     long* long_ptr = &value1; // 1 e 2
     
     //imprima o valor do objeto apontado por long_ptr
@@ -37,25 +30,25 @@ int main() {
         
     //imprimir os elementos do array values usando notação de array subscrito.
     //std::cout << "size: " << sizeof(*values) << std::endl;
-    for( int i=0; i<=sizeof(*values); i++ ) {
+    for( int i=0; i<5; i++ ) {
         std::cout << values[i] << std::endl;
     }
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento.
-    int vS = *(&values + 1) - values;
+    //int vS = *(&values + 1) - values;
     //std::cout << "size vS: " << vS << std::endl;
-    for( int i=0; i<vS; i++ ) {
+    for( int i=0; i<5; i++ ) {
         std::cout << values[i] << std::endl;
     }
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento com o nome de array como o ponteiro.
-    std::cout << "Ponteiro Deslocamento - vS " << vS << std::endl;
+    //std::cout << "Ponteiro Deslocamento " << vS << std::endl;
     for( int i=0; i<5; i++ ) {
         std::cout << *(values + i) << std::endl;
     }
     
     //imprimir os elementos do array values utilizando subscritos no ponteiro para o array.
-    std::cout << "Ponteiro para Array - vS " << vS << std::endl;
+    //std::cout << "Ponteiro para Array - vS " << vS << std::endl;
     for( int i=0; i<5; i++ ) {
         std::cout << v_ptr[i] << std::endl;
     }
@@ -70,6 +63,7 @@ int main() {
     //a notação de ponteiro/deslocamento.
     
     //imprimir a comparação entre o valor armazenado em (v_ptr-4) e values[0]
-    
+    std::cout << "Comparacao: " << ( *(v_ptr-4) == values[0]) << std::endl;
+
     return 0;
 }
