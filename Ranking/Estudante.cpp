@@ -12,5 +12,5 @@ bool Estudante::ordenar( const Estudante &a, const Estudante &b ) {
 }
 
 bool Estudante::comparar( const Estudante &a, const Estudante &b ) {
-    return a.rsg < b.rsg;
+    return a.rsg > b.rsg;
 }

@@ -46,7 +46,7 @@ int main() {
     // ordena por matricula e depois por rsg
     sort( estudantes.begin(), estudantes.end(), estudante->ordenar );
     sort( estudantes.begin(), estudantes.end(), estudante->comparar );
-    for( int i=0; i<10; i++ ) {
+    for( int i=0; i<3; i++ ) {
         cout 
             << "" << estudantes[i].matricula
             << " " << estudantes[i].nome 
