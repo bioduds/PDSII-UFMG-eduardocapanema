@@ -8,6 +8,7 @@ struct Estudante {
     std::string nome;
     int matricula;
     float notas[5];
+    float rsg;
 
     // Métodos
     float calcularRSG();
