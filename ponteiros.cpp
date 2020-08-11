@@ -49,14 +49,19 @@ int main() {
     }
 
     //imprimir os elementos do array values usando notação de array ponteiro/deslocamento com o nome de array como o ponteiro.
-    std::cout << "Ponteiro Deslocamento" << std::endl;
-    for( int i=0; i<vS; i++ ) {
-        std::cout << *(&values + i)[i] << std::endl;
+    std::cout << "Ponteiro Deslocamento - vS " << vS << std::endl;
+    for( int i=0; i<5; i++ ) {
+        std::cout << *(values + i) << std::endl;
     }
     
     //imprimir os elementos do array values utilizando subscritos no ponteiro para o array.
+    std::cout << "Ponteiro para Array - vS " << vS << std::endl;
+    for( int i=0; i<5; i++ ) {
+        std::cout << v_ptr[i] << std::endl;
+    }
     
     //imprimir o quinto elemento de values utilizando a notação de subscrito de array,
+    std::cout << "Quinto elemento " << values[4] << std::endl;
     
     //a notação de ponteiro/deslocamento com o nome de array como o ponteiro, 
     
