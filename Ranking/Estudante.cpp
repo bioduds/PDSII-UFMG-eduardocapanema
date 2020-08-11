@@ -7,10 +7,3 @@ float Estudante::calcularRSG() {
     return media;
 } 
 
-bool Estudante::ordenar( const Estudante &a, const Estudante &b ) {
-    return a.matricula < b.matricula;
-}
-
-bool Estudante::comparar( const Estudante &a, const Estudante &b ) {
-    return a.rsg > b.rsg;
-}
