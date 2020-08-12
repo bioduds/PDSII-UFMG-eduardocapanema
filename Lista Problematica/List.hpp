@@ -6,20 +6,26 @@
 
 struct Node {
 	int _value;
-	Node *_next;
+	Node* _next;
 };
 
 struct List {
-	Node *_head;
+
+    // Atributos
+	Node* _head;
 	int _size;
 
+    // Construtor
 	List();
+
+    // Métodos
 	void insert( int value );
 	void remove( int value );
 	void print();
 	void clearList();
 	int removeFirst();
 	int indexOf( int value );
+    
 };
 
 #endif

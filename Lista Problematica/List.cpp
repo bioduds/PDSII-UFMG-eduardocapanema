@@ -6,9 +6,10 @@ List::List() {
 }
 
 void List::insert( int value ) {
-    Node* node;
-	node->value = value;
-	node->next = _head;
+    Node* node = new Node;
+	node->_value = value;
+	node->_next = _head;
+    _size += 1;
 	_head = node;
 }
 
@@ -18,35 +19,36 @@ void List::clearList() {
 
 void List::print() {
 	Node* head = _head;
-	if( _size > 0 ) {
+	if( _size != 0 ) {
 		while( head ) {
-			std::cout << head->value << " ";
-			head = head->next;
+			std::cout << head->_value << " ";
+			head = head->_next;
 		}
 		std::cout<<std::endl;
 	}
 	else {
-	    std::cout<<std::endl;
+	    std::cout << "-" << std::endl;
 		return;
 	}
 }
 
 int List::removeFirst() {
-	Node* current = head;
-	_head = _head->next;
+	Node* current = _head;
+	_head = _head->_next;
+    _size -= 1;
 	delete current;
-	return current->value;
+	return current->_value;
 }
 
 int List::indexOf( int value ) {
 	if( _size > 0 ) {
 		Node* head = _head;
 		int index = 0;
-		while( head && head->value != value ) {
+		while( head && head->_value != value ) {
 			index++;
-			head = head->next;
+			head = head->_next;
 		}
-		if( head->value == value ) { return index; }
+		if( head->_value == value ) { return index; }
 		return -1;
 	}
 	else {
@@ -55,32 +57,35 @@ int List::indexOf( int value ) {
 }
 
 void List::remove( int value ) {
-	if( _size == 0 ) {
-		return;
-	}
-	else if( _head->value == value ) {
-		Node* current = head;
-		_head = _head->next;
+	if( _size == 0 ) { 
+        clearList();
+        return; 
+    }
+	else if( _head->_value == value ) {
+		Node* current = _head;
+		_head = _head->_next;
+        _size -= 1;
 		delete current;
+        if( _size == 0) { clearList(); }
+    	return;
 	}
 	else {
 		Node* previous = _head;
-		Node* current = head->next;
+		Node* current = _head->_next;
 		while( current != NULL ) {
-			if( current->value == value ) {
-				break;
-			}
+			if( current->_value == value ) { break;	}
 			else {
 				previous = current;
-				current = current->next;
+				current = current->_next;
 			}
 		}
-		if( current == NULL ) {
-			return;
-		}
+		if( current == NULL ) { return; }
 		else {
-			previous->next = current->next;
+			previous->_next = current->_next;
+            _size -= 1;
 			delete current;
+            if( _size == 0) { clearList(); }
 		}
 	}
+    return;
 }
