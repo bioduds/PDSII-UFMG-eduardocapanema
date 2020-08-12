@@ -22,17 +22,16 @@ struct EstudanteRSG {
 };
 
 bool ordenar( const Estudante &a, const Estudante &b ) {
-    return a.matricula < b.matricula;
+    return a.matricula > b.matricula;
 }
 
 bool comparar( const EstudanteRSG &a, const EstudanteRSG &b ) {
-    return a.rsg > b.rsg;
+    return a.rsg >= b.rsg;
 }
 
 
 int main() {
 
-    cout << "Iniciando Programa..." << endl;
     Estudante* estudante = new Estudante[10];
     int mat;
     char* nome = new char[7];
@@ -72,7 +71,7 @@ int main() {
         // ler entrada
 
         // preenche struct
-        estudanteRSG[i].matricula = estudantes[i].matricula = mat;
+        estudanteRSG[i].matricula = estudantes[i].matricula;
         estudanteRSG[i].nome = estudantes[i].nome;
         estudanteRSG[i].notas[0] = estudantes[i].notas[0];
         estudanteRSG[i].notas[1] = estudantes[i].notas[1];
