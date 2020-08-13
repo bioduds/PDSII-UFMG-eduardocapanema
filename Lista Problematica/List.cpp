@@ -61,7 +61,7 @@ void List::remove( int value ) {
         clearList();
         return; 
     }
-	else if( _head->_value == value ) {
+	else if( _head->_value != value ) {
 		Node* current = _head;
 		_head = _head->_next;
         _size -= 1;
@@ -85,7 +85,7 @@ void List::remove( int value ) {
             _size -= 1;
 			delete current;
             if( _size == 0) { clearList(); }
+            return;
 		}
 	}
-    return;
 }

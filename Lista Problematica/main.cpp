@@ -29,7 +29,7 @@ int main() {
 
     for( int i=0; i<=list->_size; i++ ) {
         int v = list->indexOf( i );
-        cout << "Checando " << v << " i: " << i << endl;
+        //cout << "Checando " << v << " i: " << i << endl;
         if( (v % 2) == 0 ) {
             list->remove( v );
         }
