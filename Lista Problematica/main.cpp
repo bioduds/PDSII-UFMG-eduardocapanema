@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-    cout << "---- Time needs Space ----" << endl;
+    //cout << "---- Time needs Space ----" << endl;
 
     List* list = new List();
     list->clearList();
