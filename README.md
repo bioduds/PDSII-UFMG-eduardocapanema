@@ -13,3 +13,6 @@
 
 ## Aula 04
 * **VPL 01 - Ranking**
+
+## Aula 05
+* **VPL 01 - Lista Problemática**
