@@ -23,7 +23,7 @@ struct List {
 	void remove( int value );
 	void print();
 	void clearList();
-	int removeFirst();
+	void removeFirst();
 	int indexOf( int value );
     
 };

@@ -19,7 +19,7 @@ int main() {
     }
 
     list->print();
-    cout << list->_size << endl;
+    cout << list->_size << endl; 
 
     for( int i=0; i<k; i++ ) {
         list->removeFirst();
@@ -28,10 +28,8 @@ int main() {
     cout << list->_size << endl;
 
     for( int i=0; i<=list->_size; i++ ) {
-        int v = list->indexOf( i );
-        //cout << "Checando " << v << " i: " << i << endl;
-        if( (v % 2) == 0 ) {
-            list->remove( v );
+        if( (i % 2) == 0 ) {
+            list->remove( i );
         }
     }
     list->print();

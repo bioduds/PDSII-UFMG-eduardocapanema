@@ -2,7 +2,7 @@
 
 List::List() {
 	_size = 0;
-	_head = NULL;
+	_head = nullptr;
 }
 
 void List::insert( int value ) {
@@ -14,7 +14,7 @@ void List::insert( int value ) {
 }
 
 void List::clearList() {
-	_head = NULL;
+	_head = nullptr;
 }
 
 void List::print() {
@@ -32,12 +32,12 @@ void List::print() {
 	}
 }
 
-int List::removeFirst() {
+void List::removeFirst() {
 	Node* current = _head;
 	_head = _head->_next;
     _size -= 1;
 	delete current;
-	return current->_value;
+    return;
 }
 
 int List::indexOf( int value ) {
@@ -61,31 +61,34 @@ void List::remove( int value ) {
         clearList();
         return; 
     }
-	else if( _head->_value != value ) {
+	else if( _head->_value == value ) {
 		Node* current = _head;
 		_head = _head->_next;
         _size -= 1;
-		delete current;
-        if( _size == 0) { clearList(); }
+        if( _size == 0) {
+            clearList();
+        }
+        else { delete current; }
     	return;
 	}
 	else {
 		Node* previous = _head;
 		Node* current = _head->_next;
-		while( current != NULL ) {
+		while( current != nullptr ) {
 			if( current->_value == value ) { break;	}
 			else {
 				previous = current;
 				current = current->_next;
 			}
 		}
-		if( current == NULL ) { return; }
+		if( current == nullptr ) { return; }
 		else {
 			previous->_next = current->_next;
-            _size -= 1;
-			delete current;
+            _size -= 1; 
             if( _size == 0) { clearList(); }
-            return;
+            else { 
+                delete current; }
+            if( _size == 0) { clearList(); }
 		}
 	}
 }
