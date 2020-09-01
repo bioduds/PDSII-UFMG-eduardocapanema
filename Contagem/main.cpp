@@ -1,7 +1,8 @@
+/********************************/
 #include <iostream>
 #include "WordCounter.hpp"
-
 using namespace std;
+/********************************/
 
 int main() {
 
@@ -13,7 +14,7 @@ int main() {
 		wc->addWord( s );
 		cin >> s;
 	}
-    
+
 	wc->print();
 
 	return 0;

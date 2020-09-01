@@ -5,6 +5,6 @@ Word::Word () {
 	this->count = 0;
 }
 
-void Word::incrementFreq () {
+void Word::incrementFrequency() {
 	count += 1;
 }
