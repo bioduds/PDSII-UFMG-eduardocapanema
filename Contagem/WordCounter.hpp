@@ -15,7 +15,8 @@ class WordCounter {
 
     // Atributos
 	Word *words;
-	int size = 0;
+	int size = 1;
+    map<string, int> wordsMap;
 
     // Métodos
 	WordCounter( int num_words ); // Construtor

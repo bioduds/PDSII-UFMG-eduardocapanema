@@ -11,11 +11,27 @@ WordCounter::WordCounter( int num_words ) {
 }
 
 void WordCounter::addWord( string w ) {
-    cout << "Adding word: " << w << endl;
+    
+    pair<map<string, int>::iterator, bool> returnValue;
+    returnValue = wordsMap.insert( pair<string, int>( w, size ) );
+    
+    //Check if map contains value
+    if( returnValue.second == false ) {
+        //Element already exists
+        ++returnValue.first->second;
+    }   
+
 }
 
 void WordCounter::print() {
-    cout << "Printing solemnly nothing!" << endl;
+    
+    //Iterate elements and print words 
+    map<string, int>::iterator itr;
+
+    for( itr = wordsMap.begin(); itr != wordsMap.end(); ++itr ) {
+        cout << itr->first << " ";
+        cout << itr->second << '\n';
+    }    
 
 }
 
