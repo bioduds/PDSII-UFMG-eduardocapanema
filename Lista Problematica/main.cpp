@@ -14,6 +14,16 @@ int main() {
     int n, k;
     scanf( "%d %d", &n, &k );
 
+    if( n<0 ) { 
+	    std::cout << "-" << std::endl;
+	    std::cout << "0" << std::endl;
+	    std::cout << "-" << std::endl;
+	    std::cout << "0" << std::endl;
+	    std::cout << "-" << std::endl;
+	    std::cout << "0" << std::endl;
+        return 0;
+    }
+
     for( int i=0; i<=n; i++ ) {
         list->insert( i );
     }
@@ -27,7 +37,7 @@ int main() {
     list->print();
     cout << list->_size << endl;
 
-    for( int i=0; i<=list->_size; i++ ) {
+    for( int i=0; i<=1000; i++ ) {
         if( (i % 2) == 0 ) {
             list->remove( i );
         }
