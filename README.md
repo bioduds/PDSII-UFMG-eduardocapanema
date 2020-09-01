@@ -25,3 +25,6 @@
 
 ## Classes, Atributos e Métodos
 * **VPL 1 - Contagem de Palavras**
+
+## Encapsulamento
+* **VPL 2 - Listas**
