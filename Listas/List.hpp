@@ -1,9 +1,19 @@
-
+/********************************/
+#ifndef LIST
+#define LIST
+#include <string>
+using namespace std;
+/********************************/
 
 class List {
-  public:
-    List();
 
+  private:
+
+    Node *head; ///< Pointer to the first element of the list.
+  
+  public:
+
+    List();
     /** This function inserts an element in the head of the list.
      */
     void insert(int value);
@@ -34,6 +44,5 @@ class List {
        In other words, rotate() + last() == head.
      */
     void rotate();
-  private:
-    Node *head; ///< Pointer to the first element of the list.
+    
 };
