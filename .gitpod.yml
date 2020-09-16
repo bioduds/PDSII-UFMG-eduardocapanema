@@ -4,3 +4,5 @@ vscode:
     - notskm.clang-tidy@0.5.1:+QMYmPGGWj0QCN6sba42Vw==
     - eclipse-cdt.cdt-gdb-vscode@0.0.91:IWeiNvZ9OnEVxNMv1giA+A==
     - weakish.complete-statement@0.4.0:NZQPhfLkbREikexlXZaQpQ==
+image:
+  file: .gitpod.Dockerfile
