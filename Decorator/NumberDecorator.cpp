@@ -1,8 +1,16 @@
+/****************************/
+#include <iostream>
 #include <sstream>
-
+#include <algorithm>
+#include <string>
 #include "NumberDecorator.hpp"
+using namespace std;
+/****************************/
 
 std::string NumberDecorator::toString() {
-  // Implemente
-  return "";
+
+    string s = StreamDecorator::toString();
+    replace( s.begin(), s.end(), ' ', '+');
+
+    return s;
 }

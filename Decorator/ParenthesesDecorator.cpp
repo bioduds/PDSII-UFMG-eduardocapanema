@@ -1,5 +1,9 @@
+/***********************************/
+#include <iostream>
 #include "ParenthesesDecorator.hpp"
+using namespace std;
+/***********************************/
 
-std::string ParenthesesDecorator::toString() {
+string ParenthesesDecorator::toString() {
   return "( " + StreamDecorator::toString() + " )";
 }
