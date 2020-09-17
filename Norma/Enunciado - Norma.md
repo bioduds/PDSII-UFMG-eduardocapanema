@@ -121,3 +121,15 @@ $> X=5; cat t$X.txt ; echo "--" ;./a.out < t$X.txt
 ```
 
 *Esse exercício ilustra o Princípio da Abertura-Fechamento, que diz que um programa deve ser aberto para extensão, e fechado para uso. Em outras palavras, é possível usar esse programa, porém, é também possível estendê-lo. A extensão se dá via herança. Mesmo após o programa já estar em produção, ainda é possível, por exemplo, criar pontos 4D ou 5D, sem que seja necessário alterar os outros tipos de pontos que já existem.*
+
+---
+## Apêndice
+
+### Norma Euclicidana - Wiki
+
+**Texto:** 
+
+*"On the n-dimensional Euclidean space ℝn, the intuitive notion of length of the vector x = (x1, x2, ..., xn) is captured by the formula {\displaystyle \left\|{\boldsymbol {x}}\right\|_{2}:={\sqrt {x_{1}^{2}+\cdots +x_{n}^{2}}}.}{\displaystyle \left\|{\boldsymbol {x}}\right\|_{2}:={\sqrt {x_{1}^{2}+\cdots +x_{n}^{2}}}.}[7] This is the Euclidean norm, which gives the ordinary distance from the origin to the point X—a consequence of the Pythagorean theorem. This operation may also be referred to as "SRSS", which is an acronym for the square root of the sum of squares.[8] The Euclidean norm is by far the most commonly used norm on ℝn,[7] but there are other norms on this vector space as will be shown below. However, all these norms are equivalent in the sense that they all define the same topology.The inner product of two vectors of a Euclidean vector space is the dot product of their coordinate vectors over an orthonormal basis. Hence, the Euclidean norm can be written in a coordinate-free way as {\displaystyle \left\|{\boldsymbol {x}}\right\|:={\sqrt {{\boldsymbol {x}}\cdot {\boldsymbol {x}}}}.}\left\|{\boldsymbol {x}}\right\|:={\sqrt {{\boldsymbol {x}}\cdot {\boldsymbol {x}}}}. The Euclidean norm is also called the L2 norm,[9] ℓ2 norm, 2-norm, or square norm; see Lp space. It defines a distance function called the Euclidean length, L2 distance, or ℓ2 distance. The set of vectors in ℝn+1 whose Euclidean norm is a given positive constant forms an n-sphere."*
+
+![Norma Wiki](norma_wiki.png)
+

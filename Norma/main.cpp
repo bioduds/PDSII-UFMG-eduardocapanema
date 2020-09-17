@@ -8,16 +8,17 @@
 #include "Vec1D.hpp"
 #include "Vec2D.hpp"
 #include "Vec3D.hpp"
+using namespace std;
 /*******************************/
 
-Vec* readNextPoint( std::string line ) {
-  std::istringstream ss( line );
-  std::string token;
-  std::getline( ss, token, ' ' );
+Vec* readNextPoint( string line ) {
+  istringstream ss( line );
+  string token;
+  getline( ss, token, ' ' );
   double x = stod( token );
-  if( std::getline( ss, token, ' ' ) ) {
+  if( getline( ss, token, ' ' ) ) {
     double y = stod( token );
-    if( std::getline( ss, token, ' ' ) ) {
+    if( getline( ss, token, ' ' ) ) {
       double z = stod( token );
       return new Vec3D( x, y, z );
     } else {
@@ -30,9 +31,9 @@ Vec* readNextPoint( std::string line ) {
 
 int main() {
   // read the file
-  std::vector<Vec*> vecs;
-  std::string line;
-  while( std::getline( std::cin, line ) ) {
+  vector<Vec*> vecs;
+  string line;
+  while( getline( cin, line ) ) {
     // Convert the line into a point, and push it onto the vector:
     vecs.push_back( readNextPoint( line ) );
   }
