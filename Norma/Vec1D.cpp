@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vec.hpp"
 #include "Vec1D.hpp"
+#include <math.h>
 using namespace std;
 /**************************/
 
@@ -11,11 +12,9 @@ using namespace std;
 //}
 
 double Vec1D::get_norm() const {
-    cout << "RETORNANDO VEC1D NORM" << endl;
-    return 0.1;
+    return sqrt( _x*_x );
 }
 
 string Vec1D::to_string() const {
-    cout << "RETORNANDO TO STRING" << endl;
     return "uma string...";
 }
