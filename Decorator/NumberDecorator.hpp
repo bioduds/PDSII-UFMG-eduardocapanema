@@ -17,12 +17,10 @@ public:
    * o decorador de base. param o objeto que deve ser decorado.
    */
   NumberDecorator(AbstractStream* streamObj): StreamDecorator(streamObj) {}
-
   /**
    * \O destruidor é o destruidor padrão produzido pelo compilador.
    */
   ~NumberDecorator() {};
-
   /**
    * \Este método decorado adiciona o sinal '+' na frente dos inteiros. retornar
    * a string decorada.
