@@ -12,7 +12,6 @@ class Vec2D: public Vec1D {
     Vec2D( double x, double y ):Vec1D( x ), _y( y ) {}
     virtual double getY() const { return _y; }
     string to_string() const override;
-
     /**
      * \Fornece a norma do vetor, ou seja, a distância 
      deste vetor para a origem.
