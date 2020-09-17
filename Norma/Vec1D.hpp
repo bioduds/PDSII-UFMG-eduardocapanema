@@ -1,16 +1,16 @@
 #ifndef VEC_1D
 #define VEC_1D
-
+/**************************/
+#include <iostream>
 #include "Vec.hpp"
+using namespace std;
+/**************************/
 
-/**
- * \Um vetor unidimensional.
- */
-class Vec1D: public Vec { // herança
-  public:
+class Vec1D : public Vec {
+  public :
     Vec1D( double x ) : _x( x ) {}
     double getX() const { return _x; }
-    std::string to_string() const override;
+    string to_string() const override;
     /**
      * \Fornece a norma do vetor, ou seja, a distância 
      deste vetor para a origem.
@@ -19,6 +19,7 @@ class Vec1D: public Vec { // herança
      a coordenada x.
      */
     virtual double get_norm() const override;
+//    virtual ~Vec1D();
   protected:
     double _x; ///< A única coordenada do vetor.
 };

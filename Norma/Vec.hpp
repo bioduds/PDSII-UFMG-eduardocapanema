@@ -2,26 +2,30 @@
 #define VEC_H
 
 #include <string>
+using namespace std;
+
 
 /**
- * \Interface que representa cada vetor, independente de sua dimensão.
+ * \Interface que representa cada vetor, independente 
+ de sua dimensão.
  */
 class Vec {
   public:
     /**
      * \Representação de string do vetor.
-     * \retorna uma string que representa o vetor, como uma tupla de n-dimensões.
+     * \retorna uma string que representa o vetor, 
+     como uma tupla de n-dimensões.
      */
-    virtual std::string to_string() const = 0;
-
+    virtual string to_string() const = 0;
     /**
-     * \Fornece a norma do vetor, ou seja, a distância deste vetor para a origem.
+     * \Fornece a norma do vetor, ou seja, a distância 
+     deste vetor para a origem.
      * \retorna um double que representa a norma do vetor.
      */
     virtual double get_norm() const = 0;
-
     /**
-     * \o destruidor virtual (ou então o compilador irá criar um para você).
+     * \o destruidor virtual (ou então o compilador irá 
+     criar um para você).
      */
     virtual ~Vec() {};
 };
