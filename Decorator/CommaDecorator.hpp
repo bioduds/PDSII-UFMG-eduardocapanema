@@ -10,7 +10,7 @@
  * "a, 23, b, 3,14"
  * Observe que vários espaços vazios são recolhidos em um único espaço.
  */
-class CommaDecorator: public StreamDecorator {
+class CommaDecorator : public StreamDecorator {
 
 public:
   /**
