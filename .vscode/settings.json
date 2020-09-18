@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.raku": "perl",
+    "iostream": "cpp"
+  }
+}
