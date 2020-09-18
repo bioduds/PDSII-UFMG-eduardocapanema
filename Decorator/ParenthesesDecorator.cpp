@@ -5,5 +5,9 @@ using namespace std;
 /***********************************/
 
 string ParenthesesDecorator::toString() {
-  return "( " + StreamDecorator::toString() + " )";
+
+    string s = StreamDecorator::toString();
+    cout << "PARENTHESIS: " << s << endl;
+
+    return "( " + StreamDecorator::toString() + " )";
 }
