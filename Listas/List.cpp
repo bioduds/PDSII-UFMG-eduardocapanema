@@ -53,7 +53,7 @@ void List::delete_particularposition( int pos ) {
     }
     pre->next = cur->next;
   }
-  this->_size--;
+  this->_size--; // add
 }
 
 int List::remove() {
