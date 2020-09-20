@@ -17,7 +17,7 @@ class List {
     void delete_particularposition( int pos );
     void delete_first();
     void delete_last();
-    void display_particularposition( int n );
+    int display_particularposition( int n );
     void display_first();
     void display_last();
     void display_all();
@@ -50,7 +50,7 @@ class List {
        the element at index n, assuming that the first index is zero.
        @returns the middle element of the list.
      */
-    int middle() const;
+    int middle();
     /** Returns the last element in the linked list.
        @returns the integer stored in the last element of the list.
      */

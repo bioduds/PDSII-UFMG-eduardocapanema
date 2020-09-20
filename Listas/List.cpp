@@ -7,7 +7,7 @@ using namespace std;
 
 List::List() {
   this->_size = 0;
-  this->head = NULL;
+  this->head = nullptr;
 }
 
 void List::insert( int value, int pos=0 ) {
@@ -43,7 +43,6 @@ void List::delete_particularposition( int pos ) {
   Node *pre = new Node();
   Node *cur = new Node();
   cur = this->head;
-
   if( pos == 0 ) {
     pre = this->head;
     head = head->next;
@@ -58,20 +57,23 @@ void List::delete_particularposition( int pos ) {
 }
 
 int List::remove() {
+  int sData = display_particularposition( 0 );
   delete_particularposition( 0 );
-  return 0;
+  return sData;
 }
 
 void List::delete_last() {
   delete_particularposition( this->_size - 1 );
 }
 
-void List::display_particularposition( int n ) {
+int List::display_particularposition( int n ) {
   Node *new_node = this->head;
   for( int i = 0; i < n; i++ ) {
     new_node = new_node->next;
   }    
-  cout << n << ": " << new_node->data << "\n";
+  //cout << endl << "Position " << n << ": " << new_node->data << endl;
+  //cout << new_node->data;
+  return new_node->data;
 }
 
 void List::display_first() {
@@ -82,8 +84,9 @@ void List::display_first() {
 void List::display_all() {
   Node *new_node = this->head;
   int i = 1;
+  //cout << endl;
   while( new_node ) {
-    cout << i << ": " << new_node->data << "\n";
+    //cout << "at pos: " << i << ": " << new_node->data << endl;
     new_node = new_node->next;
     i++;
   }
@@ -93,17 +96,24 @@ unsigned List::size() {
   return this->_size;
 }
 
-int List::middle() const {
-  return this->_size;
+int List::middle() {
+  display_all();
+  int m = (this->_size)/2;
+  return display_particularposition( m );
 }
 
 int List::last() {
-  display_particularposition( this->_size - 1 );
-  return 0;
+  return display_particularposition( this->_size - 1 );
 }
 
 void List::rotate() {
-  cout << "IMPLEMENT ROTATION" << endl;
+  // get first
+  int first = display_particularposition( 0 );
+  // delete first
+  remove();
+  // insert first at last
+  insert( first, this->_size );
+  // return display_particularposition( this->_size - 1 );
 }
 
 // destructor implementation
