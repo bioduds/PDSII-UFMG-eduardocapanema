@@ -12,7 +12,7 @@ int main( int argc, char** argv ) {
   List *list = new List();
 
   while( input != 0 ) {
-    list->insert(input);
+    list->insert( input, 0 );
     cin >> input;
   }
 
@@ -23,7 +23,7 @@ int main( int argc, char** argv ) {
   cout << "m:" << list->middle() << ", ";
   cout << "l:" << list->last() << ", ";
   
-  list.rotate();
+  list->rotate();
   
   cout << "m:" << list->middle() << ", ";
   cout << "l:" << list->last() << endl;
