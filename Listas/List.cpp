@@ -116,8 +116,4 @@ void List::rotate() {
   // return display_particularposition( this->_size - 1 );
 }
 
-// destructor implementation
-List::~List() {
-  cout << "List object was deleted from memory"  << "\n";
-}
 
