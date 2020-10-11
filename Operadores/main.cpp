@@ -6,7 +6,10 @@
 
 void readPoints( std::vector<Point> &vec ) {
   Point p;
-  while( std::cin >> p ) {
+  int cc = 0;
+  while( std::cin >> p.x ) {
+    std::cin >> p.y;
+    //std::cout << "whiles" << p.getX() << std::endl;
     vec.push_back( p );
   }
 }
@@ -28,7 +31,7 @@ Point sumAssPoints( std::vector<Point> &vec ) {
 
 Point sumBinPoints( std::vector<Point> &vec ) {
   Point pSum;
-  for( Point p: vec ) {
+  for( Point p : vec ) {
     pSum = pSum + p;
   }
   return pSum;
