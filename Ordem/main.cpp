@@ -3,13 +3,6 @@
 #include "GetMax.h"
 /**** 2020041515 ****/
 
-// template< class T >
-// T GetMaxDefault( T a, T b, T dflt ) {
-//   // TODO: implement this generic function.
-//   if( a > b ) { return a; } else if( a < b ) { return b; } 
-//   return dflt;
-// }
-
 BitSet* readBitSet() {
   unsigned set;
   std::cin >> set;

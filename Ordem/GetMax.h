@@ -37,6 +37,25 @@ struct BitSet {
    * \return true if bit_set1 is greater than bit_set2
    */
   // TODO: implement this operator.
+  inline bool operator > ( const BitSet& i ) const { 
+    const int limit = sizeof( unsigned ) * 8;
+    bool flag = true;
+    for( int aux=0; aux < limit; aux++ ) {
+      unsigned mask = 1 << aux;
+    //   std::cout << "_set: " << ( _set & mask ) << std::endl;
+    //   std::cout << "i._set: " << ( i._set & mask ) << std::endl;
+      if( ( i._set & mask ) != 0 ) {
+          if( ( _set & mask ) != ( i._set & mask ) ) {
+            // std::cout << "D _set: " << ( _set & mask ) << std::endl;
+            // std::cout << "D i._set: " << ( i._set & mask ) << std::endl;
+            flag = false;
+          }
+      }        
+    }
+    // std::cout << "COMP 1: " << _set << " WITH: " << i._set << std::endl;
+    return flag;
+  }
+ 
 };
 
 /**
@@ -60,6 +79,9 @@ struct Interval {
    * \return true if interval1 is greater than or equal interval2
    */
   // TODO: implement this operator.
+    inline bool operator > ( const Interval& i ) const { 
+      return( _l <= i._l && _r >= i._r );
+    }
 };
 
 /**
@@ -68,8 +90,14 @@ struct Interval {
  */
 template< class T >
 T GetMaxDefault( T a, T b, T dflt ) {
-    std::cout << "a: " << a << "b: " << b << "dflt: " << dflt << std::endl;
+  //std::cout << "a: " << a << "b: " << b << "dflt: " << dflt << std::endl;
   // TODO: implement this generic function.
+
+  if( a > b ) {
+      return a;
+  } else {
+      return dflt;
+  }
   return b;
 }
 
