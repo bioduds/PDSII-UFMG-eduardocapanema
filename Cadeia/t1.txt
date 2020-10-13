@@ -1,0 +1,13 @@
+push 2
+push 2
+mul
+print
+push 2
+mul
+print
+push 2
+mul
+print
+push 2
+mul
+print
