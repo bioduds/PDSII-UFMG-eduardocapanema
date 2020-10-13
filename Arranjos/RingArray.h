@@ -10,7 +10,7 @@
 template< class T, unsigned N > class RingArray {
   
   public:
-    RingArray() : _first( 0 ), _last( 0 ) {}
+    RingArray() : _first( 1 ), _last( 0 ) {}
     /**
      * \brief This method adds a new value into the array. If the array is full,
      * then this method stops the program. After inserting an element in the

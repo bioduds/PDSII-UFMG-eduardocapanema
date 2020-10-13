@@ -14,8 +14,8 @@ template< class T, unsigned N >
 void RingArray<T, N>::add( T value ) {
   // TODO: implement this method.
   fer_assert( isFull(), "Erro: anel cheio." );
-  buf[_last] = buf[_first];
   buf[_first] = value;
+  buf[_last] = buf[_first];
   _first++;
 }
 
@@ -23,8 +23,8 @@ template< class T, unsigned N >
 T RingArray<T, N>::get() {
   // TODO: implement this method.
   fer_assert( isEmpty(), "Erro: anel vazio." );
-  _first--;
-  return buf[_first];
+  _last++;
+  return buf[_last-1];
 }
 
 template< class T, unsigned N >
@@ -36,7 +36,7 @@ bool RingArray< T, N >::isFull() const {
 template< class T, unsigned N >
 bool RingArray< T, N >::isEmpty() const {
   // TODO: implement this method.
-  return( _first == 0 );
+return( _first == _last );
 }
 
 template< class T >
@@ -46,8 +46,12 @@ void test_add_then_get() { // d OR s
   while( std::cin >> value ) {
     r.add( value );
   }
+  int a;
   while( !r.isEmpty() ) {
-    std::cout << "not empty: " << r.get() << std::endl;
+    if( a > 0 ) {
+      std::cout << r.get() << std::endl;      
+    } else { r.get(); }
+    a++;
   }
 }
 
