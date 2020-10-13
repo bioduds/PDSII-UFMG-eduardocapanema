@@ -30,13 +30,13 @@ T RingArray<T, N>::get() {
 template< class T, unsigned N >
 bool RingArray< T, N >::isFull() const {
   // TODO: implement this method.
-  return( _first == 8 );
+  return( _first == N );
 }
 
 template< class T, unsigned N >
 bool RingArray< T, N >::isEmpty() const {
   // TODO: implement this method.
-return( _first == _last );
+return( _last == _first );
 }
 
 template< class T >
