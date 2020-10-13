@@ -39,7 +39,7 @@ template< class T, unsigned N > class RingArray {
      */
     bool isEmpty() const;
 
-  //private:
+  private:
     unsigned _first; ///< The index of the oldest element in the array.
     unsigned _last; ///< The index of the next empty spot in the array.
     T buf[N]; ///< The buffer that stores the data in the array.

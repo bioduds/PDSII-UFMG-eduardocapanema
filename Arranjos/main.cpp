@@ -46,7 +46,7 @@ void test_add_then_get() { // d OR s
   while( std::cin >> value ) {
     r.add( value );
   }
-  int a;
+  int a = 0;
   while( !r.isEmpty() ) {
     if( a > 0 ) {
       std::cout << r.get() << std::endl;      
