@@ -8,14 +8,14 @@
 double Complexo::raio( double x, double y ) {
 	double r;
 	r = sqrt( ( pow( x, 2 ) ) + ( pow( y, 2 ) ) );
-    std::cout << "raio: " << r << " y: " << y << " x: " << x << std::endl;
+    //std::cout << "raio: " << r << " y: " << y << " x: " << x << std::endl;
     return r;
 }
 
 double Complexo::theta( double x, double y ) {
 	double t;
-	t = atan( y/x )*180;
-    std::cout << "t: " << t << " y: " << y << " x: " << x << std::endl;
+	t = atan( y/x );
+    //std::cout << "t: " << t << " y: " << y << " x: " << x << std::endl;
 	return t;
 }
 
@@ -31,9 +31,13 @@ Complexo::Complexo( double a ) {
 
 Complexo::Complexo( double a, double b ) {
   raio_ = raio( a, b );
-  theta_ = theta( a, b );
-  real_ = raio_ * ( cos( theta_ ) );
-  imag_ = raio_ * ( sin( theta_ ) );
+  if( raio_ == 0 ) {
+    real_ = 0;
+    imag_ = 0;
+  } else {
+    real_ = raio_ * ( a/raio_ );
+    imag_ = raio_ * ( b/raio_ );
+  }
 }
 
 double Complexo::real() const {
