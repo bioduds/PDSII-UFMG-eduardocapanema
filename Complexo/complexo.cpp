@@ -1,7 +1,23 @@
 // Copyright 2018 Universidade Federal de Minas Gerais (UFMG)
-
+#include <iostream>
 #include "complexo.h"
 #include <cmath>
+
+#define PI 3.14159265
+
+double Complexo::raio( double x, double y ) {
+	double r;
+	r = sqrt( ( pow( x, 2 ) ) + ( pow( y, 2 ) ) );
+    std::cout << "raio: " << r << " y: " << y << " x: " << x << std::endl;
+    return r;
+}
+
+double Complexo::theta( double x, double y ) {
+	double t;
+	t = atan( y/x )*180;
+    std::cout << "t: " << t << " y: " << y << " x: " << x << std::endl;
+	return t;
+}
 
 Complexo::Complexo() {
   real_ = 0.0;
@@ -14,8 +30,10 @@ Complexo::Complexo( double a ) {
 }
 
 Complexo::Complexo( double a, double b ) {
-  real_ = a;
-  imag_ = b;
+  raio_ = raio( a, b );
+  theta_ = theta( a, b );
+  real_ = raio_ * ( cos( theta_ ) );
+  imag_ = raio_ * ( sin( theta_ ) );
 }
 
 double Complexo::real() const {
@@ -24,6 +42,14 @@ double Complexo::real() const {
 
 double Complexo::imag() const {
   return imag_;
+}
+
+double Complexo::raio() const {
+  return raio_;
+}
+
+double Complexo::theta() const {
+  return theta_;
 }
 
 bool Complexo::operator==( Complexo x ) const {

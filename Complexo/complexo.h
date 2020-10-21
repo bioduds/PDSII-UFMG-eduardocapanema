@@ -23,6 +23,10 @@ class Complexo {
   // Retorna a parte imaginária do número complexo corrente.
   double imag() const;
 
+  double raio() const;
+
+  double theta() const;
+
   // Testa se o número complexo corrente é igual a 'x'.
   bool operator==( Complexo x ) const;
 
@@ -31,6 +35,9 @@ class Complexo {
 
   // Retorna o módulo do número complexo corrente.
   double modulo() const;
+
+  double raio( double x, double y );
+  double theta( double x, double y );
 
   // Retorna o conjugado do número complexo corrente.
   Complexo conjugado() const;
@@ -58,8 +65,10 @@ class Complexo {
   double real_;
   // Parte imaginária.
   double imag_;
+  double raio_;
+  double theta_;
   friend class Teste;
-  
+
 };
 
 #endif  // TRUNK_COMPLEXO_EUCLIDIANO_SRC_COMPLEXO_H_
